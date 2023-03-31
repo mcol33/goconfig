@@ -150,7 +150,7 @@ func LoadConfigInMemory (applicationName string)(Configuration,error){
    
 	var indexApp int
 	for i:=0; i<len(applicationsConfigurations.ApplicationsConfigurations); i++ {
-		log.Print("Application name = "+applicationsConfigurations.ApplicationsConfigurations[i].ApplicationName)
+		log.Print("Application name (2) = "+applicationsConfigurations.ApplicationsConfigurations[i].ApplicationName)
 		if applicationsConfigurations.ApplicationsConfigurations[i].ApplicationName==applicationName{
 			indexApp = i
 			//log.Print("indexEnv :")
@@ -160,7 +160,7 @@ func LoadConfigInMemory (applicationName string)(Configuration,error){
 	log.Print("environement = "+GetEnvironment())
 	var indexEnv int 
 	for j:=0; j<len(applicationsConfigurations.ApplicationsConfigurations[indexApp].Configurations); j++ {
-		log.Print("Environment name = "+ applicationsConfigurations.ApplicationsConfigurations[indexApp].Configurations[j].EnvironmentName)
+		log.Print("Environment name (2) = "+ applicationsConfigurations.ApplicationsConfigurations[indexApp].Configurations[j].EnvironmentName)
 		if applicationsConfigurations.ApplicationsConfigurations[indexApp].Configurations[j].EnvironmentName==GetEnvironment() {
 			indexEnv = j
 			//log.Print("indexEnv :")
